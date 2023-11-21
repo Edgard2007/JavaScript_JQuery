@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Km=prompt("Digite a distância andada em KM")
+       //comando confirm
+       var res=confirm("A distância percorrida foi de  " +Km+" Km?")
+
+       var Combus=prompt("Digite o valor do combustível")
+       //comando confirm
+       var res=confirm("O valor do combustível é de  " +Combus+" reais?")
+       if(res)
+       {
+          //atribuindo ano atual a variavel anoAtual
+          var resultado= Km*Combus
+          var resultadoF= resultado / 8
+          alert("O valor gasto foi de "+resultadoF+ "reais");
+       }
+       </script>
+</body>
+</html>

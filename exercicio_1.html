@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números Pares</title>
+    <script>
+        function mostrarNumerosPares() {
+            // Obter o valor informado pelo usuário
+            var valorMaximoInput = document.getElementById("valorMaximo");
+            var valorMaximo = parseInt(valorMaximoInput.value);
+
+            // Verificar se o valor informado é um número válido
+            if (isNaN(valorMaximo)) {
+                alert("Por favor, insira um número válido.");
+                valorMaximoInput.value = ""; // Limpar o campo de entrada
+                return;
+            }
+
+            // Inicializar a soma
+            var soma = 0;
+
+            // Iterar de 1 até o valor informado pelo usuário
+            for (var i = 1; i <= valorMaximo; i++) {
+                // Verificar se o número é par
+                if (i % 2 === 0) {
+                    // Adicionar o número par à soma
+                    soma += i;
+                }
+            }
+
+            // Exibir a soma na página
+            var resultadoElement = document.getElementById("resultado");
+            resultadoElement.textContent = "A soma dos números pares até " + valorMaximo + " é: " + soma;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora de Soma de Números Pares</h1>
+    <label for="valorMaximo">Informe o valor máximo:</label>
+    <input type="text" id="valorMaximo" />
+    <button onclick="mostrarNumerosPares()">Calcular</button>
+    <div id="resultado"></div>
+</body>
+</html>
